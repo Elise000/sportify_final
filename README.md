@@ -39,17 +39,27 @@ SPORTIFY IS AWESOME. <3
 
 
 
-<!--     <div>
-	<a href="/admin">Admin Page</a><br>
-		<% @posts.each do |x| %>
-			<% @products = x.product_id %>
-			<% @oreo = Product.find(@products) %>
-			<% @categories = @oreo.category_id %>
-			<%= link_to 'View Deal', category_product_post_path(@categories, @products, x) %><br>
-			Deal start date: <%= x.start_date %><br>
-			Deal end date: <%= x.end_date %><br>
-			Deal price: <%= x.price %><br>
-			<%= link_to 'See product', category_product_path(@categories, @products) %><br><br>
-		<% end %>
-	</div>
-   -->
+on ur branch
+git add .
+git commit
+
+
+git checkout master
+git pull origin master
+
+git checkout branchname
+git merge master
+solve conflicts if any
+git add .
+git commit -m "xxx"
+git push origin branchname
+
+
+go to github.com
+create pull request
+merge pull request with master
+
+
+git checkout master
+git pull origin master
+git checkout -b "another_branch"
