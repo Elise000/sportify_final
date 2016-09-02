@@ -1,0 +1,5 @@
+<%= form_for [:category, @products] do |f| %>
+	<%= f.text_field :name, placeholder: 'Name' %><br> 
+	<%= f.text_field :description, placeholder: 'Description' %><br>
+	<%= f.submit 'Add Product' %>
+<% end %>

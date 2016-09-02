@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Portfolio Item - Start Bootstrap Template</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/portfolio-item.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- Page Content -->
+  <div class= "adjust_whole">
+    <div class="container">
+        <!-- Portfolio Item Heading -->
+        <div class="row" style="margin-top: 40px;">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+               
+                    <small><%=@post.product.name%></small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+        <!-- Portfolio Item Row -->
+        <div class="row" id="countdown-timer" data-countdown="<%=@dayday %>">
+            <div class="col-md-5">
+                <%= image_tag @post.product.avatar(:medium) %>   
+            </div>
+           
+                <div class="row1">
+                    <h3>Time Remaining:</h3>
+                    <div id="timer">
+        
+                      <span id="days"></span>days
+                      <span id="hours"></span>hours
+                      <span id="minutes"></span>minutes
+                      <span id="seconds"></span>seconds
+                    </div>
+                    <div>
+                        <h4>MRSP</h4>
+                        <h4 class= "price">RM <%= @post.price %></h4>
+                        <h3>Current price</h3>
+                        <h3 class= "price">RM <%= @current_price %></h3>
+                    </div> 
+
+                    <div><%= button_to "BUY", buy_path(@post), method: :post%></div>
+                </div>           
+        </div><br>
+        <div>
+        <h4><%= @post.purchase_count%> people purchased this item.</h4>
+        </div>
+        <div class= "margin-fix">
+            <div class="skillbar clearfix " data-percent="<%= @percent_bar%>%">
+                <div class="skillbar-title" style="background: #88cd2a;"><span>SOLD</span></div>
+                <div class="skillbar-bar" style="background: #88cd2a;"></div>
+                 <p></p><br>
+                <div class="skill-bar-percent">current buy <%= @post.purchase_count%>/10</div>
+            </div>
+        </div>
+        <div>
+        <div style = "float: left;">RM <%=@post.price%></div>
+        <div style = "float: left; margin-left:475px;">RM <%=@post.mid_price%></div>
+        <div style = "float: left; margin-left:480px;">RM <%=@post.low_price%></div><br>
+        </div><br>
+        <p></p><br>
+        
+            <div class="tabs">
+              <div class="tab-2">
+                <label for="tab2-1">Product Description</label>
+                <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
+                <div>
+                
+                  <%= @post.product.description%>
+                </div>
+              </div>
+              <div class="tab-2">
+                <label for="tab2-2">Discussion</label>
+                <input id="tab2-2" name="tabs-two" type="radio">
+                <div>
+                  
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="page-header">Related Products</h3>
+                </div>
+                <% @other_pics.each do |x| %>
+                <div class="col-sm-3 col-xs-6">
+                    <a href="#">
+
+                        <%= image_tag(x) %>
+                    </a>
+                </div>
+                <% end %>
+            </div>
+
+            <hr>
+        <!-- Footer -->
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Copyright &copy; Sportify Ltd 2016</p>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </footer>
+                    
+            </div>
+        <!-- /.row -->
+        <!-- Related Projects Row -->
+       
+        <!-- /.row -->
+   
+    </div>
+  </div>
+    <!-- /.container -->
+   
+</body>
+</html>

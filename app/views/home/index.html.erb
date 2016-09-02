@@ -1,0 +1,199 @@
+
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <hr>
+            </div>
+        </div>
+    </header>
+
+
+
+
+ <div class= "adjust-carousel">
+     <section class="no-padding" id="portfolio">
+             <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="service-box">
+                            <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
+                            <h3>Buy Buy Buy!</h3>
+                            <p class="text-muted">Give us all your money!</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="service-box">
+                            <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
+                            <h3>Wishlist</h3>
+                            <p class="text-muted">You can bla bla bla.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="service-box">
+                            <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
+                            <h3>Cheap!</h3>
+                            <p class="text-muted">We get our stuff in bulk from manufacturers.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="service-box">
+                            <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
+                            <h3>Wait until you're old!</h3>
+                            <p class="text-muted">Need to wait for the votes.lulz</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+ </div>
+
+    <section class="no-padding" id="portfolio">
+        <div class="container-fluid">
+            <div class="row no-gutter popup-gallery">
+                <div class="col-lg-4 col-sm-6">
+                    <a href="/categories/cycling" class="portfolio-box">
+                        <img src="https://scontent-kul1-1.xx.fbcdn.net/v/t1.0-9/14089200_104624843326690_2604942246767726169_n.jpg?oh=11f82903303859ccdd71ae9e11221ee0&oe=5848252B" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-name">
+
+                                    <!-- Cycling -->
+
+                                    <% @first = Category.first %>
+                                    <% if @first.present? %>
+                                        <%= @first.name %>
+                                    <% else %>
+                                        <p> No Category </p>
+                                    <% end %>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+
+                    <a href="/categories/badminton" class="portfolio-box">
+                        <img src="https://scontent-kul1-1.xx.fbcdn.net/v/t1.0-9/14067430_104624826660025_4024628050948353435_n.jpg?oh=4f95f6cc696e1082bf9a304e1a02ca19&oe=583BA6B0" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-name">
+                                    <!-- Badminton -->
+                                    <% @second = Category.second %>
+                                    <% if @second.present? %>
+                                        <%= @second.name %>
+                                    <% else %>
+                                        <p> No Category </p>
+                                    <% end %>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <a href="/categories/running" class="portfolio-box">
+                        <img src="https://scontent-kul1-1.xx.fbcdn.net/v/t1.0-9/14117867_104624883326686_2730649211397055248_n.jpg?oh=292e1e0d13cd88219290295d9955c711&oe=584B6D1F" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-name">
+                                    <!-- Running -->
+
+                                    <% @third = Category.third %>
+                                    <% if @third.present? %>
+                                        <%= @third.name %>
+                                    <% else %>
+                                        <p> No Category </p>
+                                    <% end %>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="col-lg-4 col-sm-6">
+                    <a href="/categories/yoga" class="portfolio-box">
+                        <img src="https://scontent-kul1-1.xx.fbcdn.net/v/t1.0-9/14080060_104624879993353_1827760821563983199_n.jpg?oh=8e17ef77dfef3c78cc925bbd3794f9c6&oe=58471234" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-name">
+                                    <!-- Yoga -->
+                                    <% @fourth = Category.fourth %>
+                                    <% if @fourth.present? %>
+                                        <%= @fourth.name %>
+                                    <% else %>
+                                        <p> No Category </p>
+                                    <% end %>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <a href="/categories/motorsport" class="portfolio-box">
+                        <img src="https://scontent-kul1-1.xx.fbcdn.net/v/t1.0-9/14142028_104624866660021_3940458258171649009_n.jpg?oh=ee77511a75d2085b763f114bd638494b&oe=58432970" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-name">
+                                    <!-- Motorsport -->
+                                    <% @fifth = Category.fifth %>
+                                    <% if @fifth.present? %>
+                                        <%= @fifth.name %>
+                                    <% else %>
+                                        <p> No Category </p>
+                                    <% end %>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <a href="/categories/golf" class="portfolio-box">
+                        <img src="https://scontent-kul1-1.xx.fbcdn.net/v/t1.0-9/14089020_104624839993357_898840997586950791_n.jpg?oh=2e9b034feac66fdafe050d793128cbea&oe=583F8BAA" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-name">
+                                    <!-- Golf -->
+                                    <% @sixth = Category.last %>
+                                    <% if @sixth.present? && @sixth.name != @first.name %>
+                                        <%= @sixth.name %>
+                                    <% else %>
+                                        <p> No Category </p>
+                                    <% end %>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+   
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Let's Get In Touch!</h2>
+                    <hr class="primary">
+                    <p>Ready to start your purchase with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                </div>
+                <div class="col-lg-4 col-lg-offset-2 text-center">
+                    <i class="fa fa-phone fa-3x sr-contact"></i>
+                    <p>123-456-6789</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+                    <p><a href="mailto:your-email@your-domain.com">feedback@sportify.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+

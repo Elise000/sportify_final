@@ -1,0 +1,39 @@
+
+<!-- post -->
+<div class= "centering">
+	<% if @wishlists.present? %>
+		<% @wishlists.each do |x| %>
+			 <%= link_to wishlist_path(x) do %>
+						<figure class="snip1423"><%= image_tag x.avatar %>
+							  <figcaption style= "height: 200px">
+					  			<h3 style= "margin: 20px"><%= x.name %><h3>
+					  			<p><%= x.description %></p>
+					  			<div class="price">
+					  			<p> Votes: <%=x.votes.count%></p>
+					  				
+			  					</div>
+			  				</figcaption>
+						</figure>
+
+			<%end%>
+		<% end %>
+	<% else %>
+		<p>There aren't any deals. Please create a post in the admin page, dear coders.</p>
+	<% end %>
+
+	<a href="/wishlists/new">
+		<figure class="snip1423">
+			<div><%= image_tag('plus.jpg')%></div>
+			 	<figcaption style= "height: 200px">
+					<br><br>
+					<h3>Create New Wishlist</h3>
+					<div class="price"></div>
+				</figcaption>
+
+		</figure>
+	</a>
+</div>
+
+        
+
+
